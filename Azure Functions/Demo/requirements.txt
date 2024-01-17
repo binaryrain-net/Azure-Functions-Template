@@ -1,0 +1,7 @@
+ 
+azure-functions 
+azure-identity 
+azure-storage-blob 
+pandas 
+python-dotenv 
+pydantic 
