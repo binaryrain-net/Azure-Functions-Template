@@ -31,3 +31,13 @@ echo azure-storage-blob >> requirements.txt
 echo pandas >> requirements.txt
 echo python-dotenv >> requirements.txt
 echo pydantic >> requirements.txt
+
+REM Adding .funcignore file
+echo .git* >> .funcignore
+echo .vscode >> .funcignore
+echo __azurite_db*__.json >> .funcignore
+echo __blobstorage__ >> .funcignore
+echo __queuestorage__ >> .funcignore
+echo local.settings.json >> .funcignore
+echo test >> .funcignore
+echo .venv >> .funcignore
