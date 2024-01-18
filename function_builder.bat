@@ -17,7 +17,8 @@ cd "Azure Functions\"
 
 REM Create an Azure Function in python
 echo Creating Azure Function...
-func new %functionName% --worker-runtime python --model v2 --template "Http Trigger" --name %functionName% --authlevel function
+func init %functionName% --worker-runtime python --model V2
+func new %functionName% --worker-runtime python --model V2
 echo Azure Function created successfully.
 
 REM Change the directory to the Azure Functions folder
