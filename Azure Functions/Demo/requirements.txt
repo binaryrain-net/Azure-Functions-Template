@@ -5,3 +5,5 @@ azure-storage-blob
 pandas 
 python-dotenv 
 pydantic 
+azure-monitor-opentelemetry 
+azure-monitor-events-extension 

@@ -32,6 +32,8 @@ echo azure-storage-blob >> requirements.txt
 echo pandas >> requirements.txt
 echo python-dotenv >> requirements.txt
 echo pydantic >> requirements.txt
+echo azure-monitor-opentelemetry >> requirements.txt
+echo azure-monitor-events-extension >> requirements.txt
 
 REM Adding .funcignore file
 echo .git* >> .funcignore
@@ -42,3 +44,23 @@ echo __queuestorage__ >> .funcignore
 echo local.settings.json >> .funcignore
 echo test >> .funcignore
 echo .venv >> .funcignore
+
+REM Adding Azure Monitor Metric Demo
+echo import os>> metric_example.py
+echo from azure.monitor.opentelemetry import configure_azure_monitor>> metric_example.py
+echo from opentelemetry import metrics>> metric_example.py
+echo.>> metric_example.py
+echo def metric_example():>> metric_example.py
+echo     # Get azure monitor connection>> metric_example.py
+echo     configure_azure_monitor(>> metric_example.py
+echo         connection_string=os.environ.get("APPLICATIONINSIGHTS_CONNECTION_STRING") or "",>> metric_example.py
+echo     )>> metric_example.py
+echo.>> metric_example.py
+echo     # Get the meter to record data.>> metric_example.py
+echo     meter = metrics.get_meter_provider().get_meter("OpenTelemetry Meter")>> metric_example.py
+echo.>> metric_example.py
+echo     value = 300>> metric_example.py
+echo.>> metric_example.py
+echo     # Record employee values to the histogram.>> metric_example.py
+echo     histogram = meter.create_histogram("metric_name")>> metric_example.py
+echo     histogram.record(value, {"KEY": "VALUE"})>> metric_example.py
