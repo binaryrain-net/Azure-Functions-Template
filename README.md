@@ -43,4 +43,5 @@ Here are the main steps of the process:
 - Create a resource group (either on portal.azure or with `az group create --name <RESOURCEGROUPNAME> --location <LOCATION>`)
 - Create a storage account (either on portal.azure or with `az storage account create --name <STORAGEACCOUNTNAME> --location <LOCATION> --resource-group <RESOURCEGROUPNAME> --sku Standard_LRS`)
 - Create a functionapp (either on portal.azure or with `az functionapp create --resource-group <RESOURCEGROUPNAME> --consumption-plan-location <LOCATION> --runtime <RUNTIME> --functions-version 3 --name <FUNCTIONAPPNAME> --storage-account <STORAGEACCOUNTNAME> --os-type Linux`)
+- To download remote application settings: `func azure functionapp fetch-app-settings <FUNCTIONAPPNAME>`
 - To deploy your created function, use the following command: `func azure functionapp publish <FUNCTIONAPPNAME>`
