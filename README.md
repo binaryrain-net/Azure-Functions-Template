@@ -39,9 +39,27 @@ Here are the main steps of the process:
   > If the function does not return an exception you should see the localhost:// paths that are now active.
 
 ## Next Steps (Deployment)
-- Make sure that you login with the azure CLI: `az login`
-- Create a resource group (either on portal.azure or with `az group create --name <RESOURCEGROUPNAME> --location <LOCATION>`)
-- Create a storage account (either on portal.azure or with `az storage account create --name <STORAGEACCOUNTNAME> --location <LOCATION> --resource-group <RESOURCEGROUPNAME> --sku Standard_LRS`)
-- Create a functionapp (either on portal.azure or with `az functionapp create --resource-group <RESOURCEGROUPNAME> --consumption-plan-location <LOCATION> --runtime <RUNTIME> --functions-version 3 --name <FUNCTIONAPPNAME> --storage-account <STORAGEACCOUNTNAME> --os-type Linux`)
-- To download remote application settings: `func azure functionapp fetch-app-settings <FUNCTIONAPPNAME>`
-- To deploy your created function, use the following command: `func azure functionapp publish <FUNCTIONAPPNAME>`
+- Make sure that you login with the azure CLI:
+  ```bash
+  az login
+  ```
+- Create a resource group (either on portal.azure or with the following command):
+  ```bash
+  az group create --name <RESOURCEGROUPNAME> --location <LOCATION>
+  ```
+- Create a storage account (either on portal.azure or with the following command):
+  ```bash
+  az storage account create --name <STORAGEACCOUNTNAME> --location <LOCATION> --resource-group <RESOURCEGROUPNAME> --sku Standard_LRS
+  ```
+- Create a functionapp (either on portal.azure or with the following command):
+  ```bash
+  az functionapp create --resource-group <RESOURCEGROUPNAME> --consumption-plan-location <LOCATION> --runtime <RUNTIME> --functions-version 3 --name <FUNCTIONAPPNAME> --storage-account <STORAGEACCOUNTNAME> --os-type Linux
+  ```
+- To download remote application settings:
+  ```bash
+  func azure functionapp fetch-app-settings <FUNCTIONAPPNAME>
+  ```
+- To deploy your created function, use the following command:
+  ```bash
+  func azure functionapp publish <FUNCTIONAPPNAME>
+  ```
