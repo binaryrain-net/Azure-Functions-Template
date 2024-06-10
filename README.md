@@ -63,3 +63,11 @@ Here are the main steps of the process:
   ```bash
   func azure functionapp publish <FUNCTIONAPPNAME>
   ```
+
+## Deployment with Github Actions
+In order to use Github Actions for automatic deployment you have to adjust some settings.
+First make sure that you save the publish profile from your function:
+- In your Repo, go to [SETTINGS > SECRETS AND VARIABLES > ACTIONS] and store the publish profile from your azure function.
+- Go to the [workflow](./.github/workflows/azure-functions.yml) and adjust the commented parts (the ones that start with "set this to your.....") to fit your own situation
+
+Now when your code is ready for production, merge your code to the ["azure-production"] branch and the github action will deploy.
