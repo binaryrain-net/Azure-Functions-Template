@@ -12,8 +12,8 @@ This repository acts as a template for azure functions.
 
 ## Prerequisites
 - [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
-- [Azure Functions Core TOol](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=windows%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-python)
-- Azure Function App (for further detail on how to set it up, go to [[#next-steps-deployment]])
+- [Azure Functions Core Tool](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=windows%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-python)
+- Azure Function App (for further detail on how to set it up, go to [Next Steps (Deployment)](https://github.com/binaryrain-net/Azure-Functions-Template?tab=readme-ov-file#next-steps-deployment)
 
 ## Description
 The [function_builder](function_builder.bat) file is a batch file designed to automate the setup of a Python-based Azure Function within a virtual environment. To activate it, just put the batch file inside the root directory and execute it. 
