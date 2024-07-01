@@ -6,10 +6,6 @@ on:
     paths:
       - 'Azure Functions/Demo/**'
 
-env:
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: 'Azure Functions/Demo/'
-  PYTHON_VERSION: '3.11'
-
 jobs:
   linter-for-suffering:
     runs-on: ubuntu-latest
@@ -19,21 +15,5 @@ jobs:
       - name: 'Checkout GitHub Action'
         uses: actions/checkout@v4
 
-      - name: Setup Python ${{ env.PYTHON_VERSION }} Environment
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
-
-      - name: 'Resolve Project Dependencies Using Pip'
-        shell: bash
-        run: |
-          pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt --target=".python_packages/lib/site-packages"
-          popd
-
       - name: Lint with Ruff
-        run: |
-          pip install ruff
-          ruff --output-format=github .
-        continue-on-error: false
+        uses: chartboost/ruff-action@v1
