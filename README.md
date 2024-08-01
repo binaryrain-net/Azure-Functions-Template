@@ -30,10 +30,17 @@ Here are the main steps of the process:
 
 ## Next Steps (Local)
 - Activate the Virtual Environment
+    In order to start a virtual environment it is important to install the python module [VENV](https://docs.python.org/3/library/venv.html).
+
+    With the following command you can create a virtual env in the current directory:
+    ```bash
+    python -m venv .venv
+    ```
+    
     To activate the virtual env you have to run one of the activation applications inside the terminal. For PowerShell use the following command:
-        ```bash
-        PS C:\> <venv>\Scripts\Activate.ps1
-        ```
+    ```bash
+    PS C:\> <venv>\Scripts\Activate.ps1
+    ```
 - Install the dependencies inside the function directory: `pip install -r ./requirements.txt`
 - Start the local azure function: `func host start`
   > If the function does not return an exception you should see the localhost:// paths that are now active.
