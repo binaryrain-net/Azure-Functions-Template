@@ -80,7 +80,7 @@ First make sure that you save the publish profile from your function:
 Now when your code is ready for production, merge your code to the ["azure-production"] branch and the github action will deploy.
 
 > Warning:
-> If you enter the github action like the following: `Azure/functions-action@v1` it does not always use the latest release. As explained in the [chapter below](##Consumption-plans), for flex consumption it is important that you at least use the `1.5.2` version: `Azure/functions-action@v1.5.2`
+> If you enter the github action like the following: `Azure/functions-action@v1` it does not always use the latest release. As explained in the [chapter below](#Consumption-plans), for flex consumption it is important that you at least use the `1.5.2` version: `Azure/functions-action@v1.5.2`
 
 ## Consumption plans
 If you are working with large files and want the function to handle them, the default consumption with its default RAM is probably not enough. With this in mind, Microsoft created another consumption plan called [Flex consumption](https://learn.microsoft.com/en-us/azure/azure-functions/flex-consumption-plan). This consumption plan has double the RAM and other features (including virtual network support). The downside though: some usual helpful features and properties are not (or not yet) supported. For further information regarding deprecations please click [here](https://learn.microsoft.com/en-us/azure/azure-functions/functions-app-settings#flex-consumption-plan-deprecations).
