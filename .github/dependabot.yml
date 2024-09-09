@@ -12,6 +12,11 @@ updates:
     schedule:
       interval: "weekly"
   - package-ecosystem: "pip"
-    directory: "Azure Functions/Demo"
+    directory: "Azure Functions/DemoHttpTrigger"
     schedule:
       interval: "weekly"
+  - package-ecosystem: "pip"
+    directory: "Azure Functions/DemoQueueTrigger"
+    schedule:
+      interval: "weekly"
+
