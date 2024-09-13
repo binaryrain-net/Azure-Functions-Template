@@ -1,22 +1,12 @@
-# To get started with Dependabot version updates, you'll need to specify which
-# package ecosystems to update and where the package manifests are located.
-# Please see the documentation for all configuration options:
-# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
-
 version: 2
 updates:
+  # update GH actions
   - package-ecosystem: "github-actions"
-    # Workflow files stored in the
-    # default location of `.github/workflows`
     directory: "/.github/workflows"
     schedule:
       interval: "weekly"
   - package-ecosystem: "pip"
-    directory: "Azure Functions/DemoHttpTrigger"
+    directories: 
+      - "Azure Functions/*"
     schedule:
       interval: "weekly"
-  - package-ecosystem: "pip"
-    directory: "Azure Functions/DemoQueueTrigger"
-    schedule:
-      interval: "weekly"
-
