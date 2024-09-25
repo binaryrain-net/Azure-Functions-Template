@@ -70,6 +70,10 @@ Here are the main steps of the process:
   ```bash
   func azure functionapp publish <FUNCTIONAPPNAME>
   ```
+- To deploy your created function inside a specific deployment slot, use the following command:
+  ```bash
+  func azure functionapp publish <FUNCTIONAPPNAME> --slot <SLOTNAME>
+  ```
 
 ## Deployment with Github Actions
 In order to use Github Actions for automatic deployment you have to adjust some settings.
