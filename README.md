@@ -70,10 +70,18 @@ Here are the main steps of the process:
   ```bash
   func azure functionapp publish <FUNCTIONAPPNAME>
   ```
+- To deploy your created function inside a specific deployment slot, use the following command:
+  ```bash
+  func azure functionapp publish <FUNCTIONAPPNAME> --slot <SLOTNAME>
+  ```
 
 ## Deployment with Github Actions
 In order to use Github Actions for automatic deployment you have to adjust some settings.
 First make sure that you save the publish profile from your function:
+- Ensure that the SCM Auth is enabled:
+  
+    ![image](https://github.com/user-attachments/assets/10c09464-e487-4e0d-8299-86d802014e1c)
+
 - In your Repo, go to [SETTINGS > SECRETS AND VARIABLES > ACTIONS] and store the publish profile from your azure function.
 - Go to the [workflow](./.github/workflows/azure-functions.yml) and adjust the commented parts (the ones that start with "set this to your.....") to fit your own situation
 
