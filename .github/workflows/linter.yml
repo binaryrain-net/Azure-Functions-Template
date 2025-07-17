@@ -17,3 +17,5 @@ jobs:
 
       - name: Lint with Ruff
         uses: astral-sh/ruff-action@v3
+        with:
+          args: "check --config ruff.toml"
