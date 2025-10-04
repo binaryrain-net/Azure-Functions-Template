@@ -1,0 +1,13 @@
+[project]
+name = "demofastapireact"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "azure-functions>=1.23.0",
+    "fastapi>=0.118.0",
+    "jinja2>=3.1.6",
+    "python-dotenv>=1.1.1",
+    "uvicorn>=0.37.0",
+]

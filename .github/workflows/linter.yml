@@ -6,6 +6,10 @@ on:
     paths:
       - 'Azure Functions/Demo/**'
 
+# Allow this job to clone the repo and create a page deployment
+permissions:
+  contents: read
+
 jobs:
   linter-for-suffering:
     runs-on: ubuntu-latest
@@ -13,7 +17,7 @@ jobs:
 
     steps:
       - name: 'Checkout GitHub Action'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Lint with Ruff
         uses: astral-sh/ruff-action@v3
