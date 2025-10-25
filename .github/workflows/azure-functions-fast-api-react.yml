@@ -25,11 +25,11 @@ jobs:
     environment: dev
     steps:
       - name: "Checkout GitHub Action"
-        uses: actions/checkout@v5
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
 
       # Setup Frontend
       - name: Setup Node ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903
         with:
           node-version: ${{ env.NODE_VERSION }}
 
@@ -40,7 +40,7 @@ jobs:
         working-directory: ${{ env.FRONTEND_WORKING_DIRECTORY }}
 
       - name: Setup Python ${{ env.PYTHON_VERSION }} Environment
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
@@ -53,7 +53,7 @@ jobs:
           popd
 
       - name: "Run Azure Functions Action"
-        uses: Azure/functions-action@v1
+        uses: Azure/functions-action@0bd707f87c0b6385742bab336c74e1afc61f6369
         id: fa
         with:
           app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
