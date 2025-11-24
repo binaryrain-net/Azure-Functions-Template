@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: 'Checkout GitHub Action'
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Lint with Ruff
         uses: astral-sh/ruff-action@v3
