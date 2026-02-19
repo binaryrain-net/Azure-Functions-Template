@@ -5,12 +5,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 import uvicorn
-from dotenv import load_dotenv
 import logging
 import random
 
-
-load_dotenv()
 
 logger = logging.getLogger(__name__)
 

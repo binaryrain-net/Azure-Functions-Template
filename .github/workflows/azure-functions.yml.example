@@ -23,10 +23,10 @@ jobs:
     environment: dev
     steps:
     - name: 'Checkout GitHub Action'
-      uses: actions/checkout@v5
+      uses: actions/checkout@XXX
 
     - name: Setup Python ${{ env.PYTHON_VERSION }} Environment
-      uses: actions/setup-python@v6
+      uses: actions/setup-python@XXX
       with:
         python-version: ${{ env.PYTHON_VERSION }}
 
@@ -39,7 +39,7 @@ jobs:
         popd
 
     - name: 'Run Azure Functions Action'
-      uses: Azure/functions-action@v1
+      uses: Azure/functions-action@XXX
       id: fa
       with:
         app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
